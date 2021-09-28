@@ -1,0 +1,605 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body{
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* 左右要 留白padding 5%，因為有box-sizing: border-box所以寬還要加10% */
+    max-width: calc(1600px + 10%);
+    padding: 0 5%;
+    margin: 0 auto;
+    min-width: 320px;
+}
+a{
+    text-decoration: none;
+}
+a:not(.MID-Button,Button>a>span,i){   
+    color: black;
+}
+/* --------------------------頁首------------------------------ */
+.phone{
+    display: none;
+}
+.burger{
+    width: 30px;
+}
+.more{
+    display: none;
+    position: relative;
+}
+.menu-more{
+    position: absolute;
+    left: 0;
+    bottom: -136px;
+    padding: 0px;
+    z-index: 6;
+    background-color: #F2F2F2;
+    display: none;
+}
+.more-menu-btn{
+    padding: 20px 80px 20px 20px;
+}
+.more-menu-btn:nth-child(2){
+    border-bottom: 2px solid #000000;
+}
+header .container{
+    flex-direction: row;
+    height: 54px;
+}
+.LOGO img{
+    width: 108px;
+    margin: 9px 22px 0 10px;
+}
+.header-left{
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    gap: 3px;
+    padding: 0;
+    font-size: 13px;
+}
+li{
+    list-style-type: none;
+    color: black;
+}
+li:hover:not(.sign-btn,.copyright,.Language li,.more){
+    cursor: pointer;
+    text-decoration:underline;
+}
+.Language span:hover{
+    text-decoration:underline;
+}
+.menu a{
+    padding: 0 12px;
+    color: black;
+}
+a:hover{
+    cursor: pointer;
+}
+.header-right li{
+    position: relative;
+    padding: 0px 20px;
+}
+.other-menu-btn{
+    margin-right: 12px;
+}
+.other-menu-btn i{
+    position: absolute;
+    top: 5px;
+    font-size: 19px;
+}
+.other-menu-btn img{
+    position: absolute;
+    width: 17px;
+    height: 16px;
+}
+.cart-btn{
+    margin-right: -45px;
+}
+.cart-btn i{
+    font-size: 16px;
+}
+
+.sign-btn{
+    margin-right: 16px;
+    position: relative;
+}
+.sign-btn img {
+    position: absolute;
+    top: -9px;
+    right: -8px;
+    width: 32px;
+}
+/* ---------------------------主內容------------------------------ */
+img{
+    width: 100%;
+}
+picture{
+    z-index: 1;
+}
+#carouselA {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.TOP-info{
+    width: 417px;
+    margin-left: 96px;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    z-index: 1;
+}
+h1{
+    font-size: 34px;
+    font-weight: 500;
+    margin: 0px;
+}
+p{
+    font-size: 15px;
+}
+.SMICON>p:hover{
+text-decoration: underline;
+}
+
+.Button{
+    width: 122px;
+    height: 38px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    background-color: black;
+}
+.Button:hover{
+    background-color: rgb(36, 36, 36);
+}
+.Button a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition-duration: 0.3s;
+    height: 38px;
+}
+.Button a:hover{
+    gap: 20px;
+    
+}
+.Button span{
+    font-size: 15px;
+    font-weight: 600;
+    color:white;
+    position: relative;
+}
+/* 
+::before、::after 大概是最常使用的偽元素，兩者都是以 display:inline-block 的屬性存在 
+有點像div，但可以寫在CSS，大量裝飾同一種元素
+偽元素需要具備 content 的屬性，就算是只有content:""都可以
+通常會搭配 position: absolute 使用，裝飾元素，如上下所示。
+*/
+.Button span::before {
+/* 當你使用偽元素的時候，一定要加 content，如果不加，就無法使用 */
+	content: '';
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 0;
+	background-color: rgb(255, 255, 255);
+	transition-duration: 0.1s;
+}
+
+.Button span:hover::before {
+	height: 2.5px;
+    bottom: -2.5px;
+}
+
+.Button i{
+    color: white;
+}
+.LR-BTN {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    /* 左右要 留白padding 5%，因為有box-sizing: border-box所以寬還要加10% */
+    max-width: calc(1600px + 10%);
+    top: 50%;
+    transform: translatey(-50%);
+}
+.circle-btn {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    width: 42px;
+    background-color: white;
+    border-radius: 50%;
+}
+picture:hover{
+    z-index: unset;
+    /* cursor: pointer; 改變滑鼠游標為手指 */
+    cursor: pointer;
+}
+.LR-BTN:hover,.TOP-info:hover{
+    z-index: 2;
+    cursor: pointer;
+}
+.circle-btn:hover{
+    box-shadow: 0 5px 10px rgba(34, 34, 34, 0.2);
+    cursor: pointer;
+}
+/* *****************區塊2******************** */
+#carouselB{
+    display: flex;
+    /*給個 align-items 大小才會跟著變化 */
+    align-items: flex-start;
+    gap: 0px;
+    padding: 55px;
+    font-weight: 600;
+    text-align: center;
+}
+#carouselB img{
+    width: 40px;
+}
+
+#carouselB p{
+    width: 125px;
+    margin: 0;
+}
+/* 因為有border box，所以先給個透明固定border，這樣到active時有被撐開的感覺 */
+#carouselB>a{
+    border: 2px solid rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding: 15px 30px;
+}
+/* 有點像hover但是是用點的 */
+#carouselB>a:active{
+    border: 2px solid black;
+    background-color: #E5F0F8 ;
+}
+/* *****************區塊3******************** */
+#carouselC{
+    display: flex;
+    margin:-13px -12px 0 -12px;
+    padding-bottom: 58px;
+}
+.MIDIMG{
+    width: 100%;
+    padding: 0 12px;
+}
+h2{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 33px 0 4px 0;
+}
+.MIDIMG p{
+    margin: 0 0 10px 0;
+    padding-right: 10px;
+}
+.MIDIMG span{
+    font-size: 14.5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.MID-Button>a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(27, 130, 190);
+    transition-duration: 0.2s;
+}
+.MID-Button i{
+    margin-top: 2px;
+    padding-right: 25px;
+}
+.MID-BUTTON-BOX {
+    display: flex;
+}
+.MID-Button>a:hover{
+    gap: 15px;
+    margin-right: -5px;
+}
+.MID-Button span:hover{
+    text-decoration: underline;
+}
+#Business-title{
+   width: 100%
+}
+h3{
+    font-size: 24px;
+    margin: 36px 0px;
+}
+/* *****************GOOGLE********************* */
+
+#carouselD{
+    width: 100%;
+}
+.GOOGLE{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 51px;
+}
+.GOOGLE img{
+    width: 28px;
+}
+.GOOGLE>span{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color: #666;
+}
+.GOOGLE>a{
+   font-size: 0px;
+}
+img:hover:not(picture>img,.SMICON>img,.LOGO>a>img) {
+    opacity:0.8;
+}
+/* ************  footer  *************** */
+footer {
+    background-color: rgb(242, 242, 242);
+    min-width: 320px;
+}
+.Bottom-meun{
+    width: 100%;
+    display: flex;
+    opacity: 0.7;
+    /* 因為下方 padding: 0 10px; 全向右滑行*/
+    margin-left: -20px;
+}
+.Bottom-meun>ul{
+    width: 100%;
+    margin: 0;
+    padding: 0 10px;
+}
+h4{
+    font-size: 15px;
+    margin: 0;
+    padding: 34px 0 4px;
+}
+
+.Bottom-meun li{
+    font-size: 8px;
+    padding: 8px 0;
+}
+
+.Bottom-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin: 31px 0 7px 0;
+    padding-right: 24px;
+}
+.Language>ul{
+    padding: 0px;
+    opacity: 0.7;
+}
+.Language a{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.Language i{
+    font-size: 20px;
+}
+.Bottom-right-menu>ul{
+    opacity: 0.7;
+    display: flex;
+    padding: 0px;
+    gap: 27px;
+    flex-wrap: wrap;
+}
+/* *****************RWD*************** */
+@media screen and (max-width:1400px) {
+.header-right>.menu{
+    display: flex;
+    gap: 20px;
+    padding-right: 10px;
+}
+.header-right a{
+    font-size: 0px;
+    padding: 0px;
+}
+.header-right span{
+    display: none;
+}
+.header-right li{
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+.header-right i{
+    top: 11px;
+    right: 6px;
+}
+.header-right li:first-child{
+    padding-right: 20px;
+
+}
+.header-right img{
+    position: unset;
+}
+
+h1{
+    font-size: 23px;
+}
+.MID-BUTTON-BOX{
+    flex-direction: column;
+}
+.MID-BUTTON-BOX .MID-Button{
+    padding-bottom: 20px;
+}
+#carouselC {
+    padding-bottom: 40px;
+}
+}
+@media screen and (max-width:1080px) {
+.TOP-info{
+    margin-left: 76.6px;
+}
+main .container{
+    max-width: 100%;
+    padding: 0px;
+}
+#carouselB,#carouselC,#carouselD,#Business-title{  
+    max-width: unset;
+    padding-left: calc(5% - 12px);
+    padding-right: calc(5% - 12px);
+    margin:0;
+}
+
+picture img{
+    width: 100%;
+    min-width: 320px;
+}
+.TOP-info{
+    width: 340px;
+}
+header .container{
+    padding-left: 24px;
+    padding-right: 24px;
+}
+#carouselC{
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+.MIDIMG{
+    width: 50%;
+    padding-bottom: 41px;
+}
+
+.MID-BUTTON-BOX{
+    flex-direction: row;
+}
+#carouselD{
+    width: 100%;
+}
+.Bottom-info{
+    width: 103%;
+}
+.Bottom-meun{
+    width: 103%;
+    flex-wrap: wrap;
+}
+.Bottom-meun>ul{
+    width: calc(100%/3);
+}
+}
+@media screen and (max-width:880px) {
+.more{
+    display: block;
+}
+/* 當.more被:hover 時，顯示.menu-more*/
+.more:hover>.menu-more{
+    display: block;
+}
+.menu li:nth-child(5),.menu li:nth-child(6){
+   display: none;
+}
+}
+@media screen and (max-width:855px) {
+nav{
+    display: none; 
+}
+.header-left{
+    display: flex;
+    gap: calc(50vw - 150px);
+}
+.LOGO img {
+    margin: 9px 22px 0 10px;
+}
+
+.phone{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.other-menu-btn img {
+    top: 15px;
+}
+.header-right .other-menu-btn{
+    display: none;
+}
+}
+@media screen and (max-width:760px) {
+.TOP-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:unset;
+    top: 0;
+    text-align: center;
+    transform: translatey(0);
+    margin: -5px 0;
+    height: 330px;
+    background-color: rgb(231, 231, 231);
+}
+h1{
+    font-size: 20px;
+}
+.TOP-info p{
+    margin: 5px 0 -10px;
+}
+.Bottom-info{
+    flex-direction: column;
+}
+#carouselB{
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px 10px;
+    gap: 30px;
+}
+#carouselB img{
+    width: 20px;
+    height: 20px;
+}
+.SMICON{
+    display: flex;
+    align-items: center;
+}
+#carouselB p{
+    width: 100%;
+    padding: 0 10px;
+}
+.MID-BUTTON-BOX{
+    flex-direction: column;
+}
+h2{
+    margin-top: 15px;
+}
+.Bottom-right-menu>ul {
+    gap: 15px;
+}
+}
+@media screen and (max-width:540px) {
+.MIDIMG{
+    width: 100%;
+}
+.MID-BUTTON-BOX {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.Bottom-meun {
+    display: unset;
+}
+.Bottom-meun>ul {
+    width: 100%;
+}
+}
