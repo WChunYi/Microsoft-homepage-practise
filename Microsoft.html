@@ -8,10 +8,10 @@
     <!-- title : 網站名稱，可以用F12去head裡的title找 -->
     <title>Microsoft – 雲端、電腦、應用程式和遊戲</title>
     <!-- 
-        font-awesome 的 CDNjs 第1個 Link Tag
-        font-awesome 有很多文字 icon 可以使用
-        但需要 CDNjs 的 link 去外連....<i>是一種文字標籤
-    -->
+            font-awesome 的 CDNjs 第1個 Link Tag
+            font-awesome 有很多文字 icon 可以使用
+            但需要 CDNjs 的 link 去外連....<i>是一種文字標籤
+        -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,6 +19,15 @@
     <link rel="shortcut icon" href="./IMG/LOGO/favicon.ico" type="image/x-icon">
     <!-- link:CSS可以找到CSS連結，同上 link為外連用 -->
     <link rel="stylesheet" href="./CSS/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <style>
+        .swiper {
+            width: 100%;
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -65,32 +74,70 @@
             </div>
         </div>
     </header>
-    <!-------------- 主內容 --------------->
     <main>
         <div class="container">
-            <!-- 區塊1 -->
-            <section id="carouselA">
-                <!-- 圖片用RWD會自動更換圖片 -->
-                <picture>
-                    <source srcset="./IMG/Bigimg/IMGBIG1.webp" media="(min-width: 1080px)">
-                    <source srcset="./IMG/Bigimg/IMGBIG2.webp" media="(min-width: 768px)">
-                    <img src="./IMG/Bigimg/IMGBIG00.webp" alt="奇怪的筆電">
-                </picture>
-                <div class="LR-BTN">
-                    <div class="circle-btn btn-left"><i class="fas fa-angle-left"></i></div>
-                    <div class="circle-btn btn-right"><i class="fas fa-angle-right"></i></div>
-                </div>
-                <div class="TOP-info">
-                    <h1>Surface Laptop Go</h1>
-                    <P>運用我們所推出最輕巧的 Surface 筆記型電腦，善加利用每一天</P>
-                    <div class="Button">
-                        <a href="">
-                            <span>立即選購</span>
-                            <i class="fas fa-angle-right"></i>
-                        </a>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <section id="carouselA">
+                            <!-- 圖片用RWD會自動更換圖片 -->
+                            <picture>
+                                <source srcset="./IMG/Bigimg/IMGBIG1.webp" media="(min-width: 1080px)">
+                                <source srcset="./IMG/Bigimg/IMGBIG2.webp" media="(min-width: 768px)">
+                                <img src="./IMG/Bigimg/IMGBIG00.webp" alt="奇怪的筆電">
+                            </picture>
+                            <!-- <div class="LR-BTN">
+                                <div class="circle-btn btn-left"><i class="fas fa-angle-left"></i></div>
+                                <div class="circle-btn btn-right"><i class="fas fa-angle-right"></i></div>
+                            </div> -->
+                            <div class="TOP-info">
+                                <h1>Surface Laptop Go</h1>
+                                <P>運用我們所推出最輕巧的 Surface 筆記型電腦，善加利用每一天</P>
+                                <div class="Button">
+                                    <a href="">
+                                        <span>立即選購</span>
+                                        <i class="fas fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="swiper-slide">
+                        <section id="carouselA">
+                            <!-- 圖片用RWD會自動更換圖片 -->
+                            <picture>
+                                <source srcset="./IMG/Bigimg/IMGBIG.webp" media="(min-width: 1080px)">
+                                <source srcset="./IMG/Bigimg/IMGBIG33.webp" media="(min-width: 768px)">
+                                <img src="./IMG/Bigimg/IMGBIG3.webp" alt="手拿平平子">
+                            </picture>
+                            <!-- <div class="LR-BTN">
+                                <div class="circle-btn btn-left"><i class="fas fa-angle-left"></i></div>
+                                <div class="circle-btn btn-right"><i class="fas fa-angle-right"></i></div>
+                            </div> -->
+                            <div class="TOP-info">
+                                <h1>隨身型動力</h1>
+                                <P>Surface Go 2 結合了平板電腦的多功能性與筆記型電腦的可攜性，非常適合用來處理日常工作、家庭作業和玩樂</P>
+                                <div class="Button">
+                                    <a href="">
+                                        <span>立即選購</span>
+                                        <i class="fas fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
-            </section>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
             <!-- 區塊2 -->
             <section id="carouselB">
                 <a href="">
@@ -339,7 +386,26 @@
             </div>
         </div>
     </footer>
-    </div>
+
+
+    <!-- 這個要打在最後，但要在JS之上 -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 
 </html>

@@ -204,40 +204,43 @@ text-decoration: underline;
 .Button i{
     color: white;
 }
-.LR-BTN {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    position: absolute;
-    width: 100%;
-    /* 左右要 留白padding 5%，因為有box-sizing: border-box所以寬還要加10% */
-    max-width: calc(1600px + 10%);
-    top: 50%;
-    transform: translatey(-50%);
-}
-.circle-btn {
-    font-size: 30px;
+/* 權重要較大，因此寫在父層 */
+.swiper .swiper-button-prev,.swiper .swiper-button-next {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 42px;
     width: 42px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 50%;
+    color: rgb(75, 75, 75);
+    opacity: 0;
 }
+.swiper .swiper-button-prev::after,.swiper .swiper-button-next::after{
+    font-size: 20px;
+}
+
 picture:hover{
-    z-index: unset;
-    /* cursor: pointer; 改變滑鼠游標為手指 */
     cursor: pointer;
 }
-.LR-BTN:hover,.TOP-info:hover{
-    z-index: 2;
+.swiper:hover > .swiper-button-prev{
+    opacity: 1;
+}
+.swiper:hover > .swiper-button-next{
+    opacity: 1;
+}
+
+.TOP-info:hover{
     cursor: pointer;
 }
-.circle-btn:hover{
+.swiper-button-prev:hover , .swiper-button-next:hover{
     box-shadow: 0 5px 10px rgba(34, 34, 34, 0.2);
     cursor: pointer;
 }
+.swiper-pagination {
+    --swiper-theme-color: #000000;
+}
+
 /* *****************區塊2******************** */
 #carouselB{
     display: flex;
