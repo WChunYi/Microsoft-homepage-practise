@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title : 網站名稱，可以用F12去head裡的title找 -->
+    <title>Microsoft – 雲端、電腦、應用程式和遊戲</title>
+    <!-- 
+        font-awesome 的 CDNjs 第1個 Link Tag
+        font-awesome 有很多文字 icon 可以使用
+        但需要 CDNjs 的 link 去外連....<i>是一種文字標籤
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- link:favicon可以找到icon連結，為.ico檔用於LOGO -->
+    <link rel="shortcut icon" href="./IMG/LOGO/favicon.ico" type="image/x-icon">
+    <!-- link:CSS可以找到CSS連結，同上 link為外連用 -->
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <!--------------- 頁首 ---------------->
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <div class="phone">
+                    <div class="burger"><a href=""><img src="./IMG/BURGER.jpg" alt=""></a></div>
+                    <li class="other-menu-btn"><img src="./IMG/ICOM1.jpg" alt="search"></li>
+                </div>
+                <div class="LOGO">
+                    <a href="" alt="LOGO">
+                        <img src="./IMG/LOGO/LOGO.png">
+                    </a>
+                </div>
+                <nav>
+                    <ul class="menu">
+                        <li class="menu-btn"><a href="">Microsoft 365</a></li>
+                        <li class="menu-btn"><a href="">Office</a></li>
+                        <li class="menu-btn"><a href="">Windows</a></li>
+                        <li class="menu-btn"><a href="">Surface</a></li>
+                        <li class="menu-btn"><a href="">Xbox</a></li>
+                        <li class="menu-btn"><a href="">支援</a></li>
+                        <li class="more">
+                            <a href="">更多
+                                <i class="fas fa-angle-down"></i>
+                            </a>
+                            <ul class="menu-more">
+                                <li class="more-menu-btn"><a href="">Xbox</a></li>
+                                <li class="more-menu-btn"><a href="">支援</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right">
+                <ul class="menu">
+                    <li class="other-menu-btn">所有 Microsoft<i class="fas fa-angle-down"></i></li>
+                    <li class="other-menu-btn"><span>搜尋</span><img src="./IMG/ICOM1.jpg" alt="search"></li>
+                    <li class="cart-btn"><a href="">購物車<i class="fas fa-shopping-cart"></i></a></li>
+                    <li class="sign-btn"><a href="">登入<img src="./IMG/ICOM3.svg" alt="search"></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-------------- 主內容 --------------->
+    <main>
+        <div class="container">
+            <!-- 區塊1 -->
+            <section id="carouselA">
+                <!-- 圖片用RWD會自動更換圖片 -->
+                <picture>
+                    <source srcset="./IMG/Bigimg/IMGBIG1.webp" media="(min-width: 1080px)">
+                    <source srcset="./IMG/Bigimg/IMGBIG2.webp" media="(min-width: 768px)">
+                    <img src="./IMG/Bigimg/IMGBIG00.webp" alt="奇怪的筆電">
+                </picture>
+                <div class="LR-BTN">
+                    <div class="circle-btn btn-left"><i class="fas fa-angle-left"></i></div>
+                    <div class="circle-btn btn-right"><i class="fas fa-angle-right"></i></div>
+                </div>
+                <div class="TOP-info">
+                    <h1>Surface Laptop Go</h1>
+                    <P>運用我們所推出最輕巧的 Surface 筆記型電腦，善加利用每一天</P>
+                    <div class="Button">
+                        <a href="">
+                            <span>立即選購</span>
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- 區塊2 -->
+            <section id="carouselB">
+                <a href="">
+                    <div class="SMICON">
+                        <img src="./IMG/IMGSM1.jpg" alt="四個方塊">
+                        <p>選擇您的Microsoft 365</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="SMICON">
+                        <img src="./IMG/IMGSM2.jpg" alt="立起的裝置">
+                        <p>選購 Surface 裝置</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="SMICON">
+                        <img src="./IMG/IMGSM3.jpg" alt="斜的方塊">
+                        <p>取得 Windows 10</p>
+                    </div>
+                </a>
+            </section>
+            <!-- 區塊3 -->
+            <section id="carouselC">
+                <a href="">
+                    <div class="MIDIMG">
+                        <img src="./IMG/MIDIMG/IMGMID1.jpg" alt="">
+                        <h2>Surface Pro 7</h2>
+                        <p>更多 Pro 中您熟知的功能。 比以往更加強大，Surface Pro 7 配備筆記型電腦等級的 Intel® Core™ 處理器。</p>
+                        <div class="MID-Button">
+                            <a href="">
+                                <span>立即選購</span>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="MIDIMG">
+                        <img src="./IMG/MIDIMG/IMGMID2.jpg" alt="">
+                        <h2>Microsoft 365</h2>
+                        <p>進階版 Office 應用程式、額外的雲端儲存空間、進階安全性等功能，全都在一個方便的訂閱中。</p>
+                        <div class="MID-BUTTON-BOX">
+                            <div class="MID-Button">
+                                <a href="">
+                                    <span>最多可供 6 人使用</span>
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </div>
+                            <div class="MID-Button">
+                                <a href="">
+                                    <span>適合 1 人使用</span>
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="MIDIMG">
+                        <img src="./IMG/MIDIMG/IMGMID3.jpg" alt="">
+                        <h2>Xbox Game Pass Ultimate</h2>
+                        <p>Xbox Live Gold 和超過 100 款高品質的主機遊戲和電腦遊戲。 與好友同樂，並探索下一個最愛遊戲。</p>
+                        <div class="MID-Button">
+                            <a href="">
+                                <span>立即加入</span>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="MIDIMG">
+                        <img src="./IMG/MIDIMG/IMGMID4.jpg" alt="">
+                        <h2>Microsoft Edge</h2>
+                        <p>在您瀏覽時提供世界級的效能，以及更多的隱私、更充足的生產力與更高的價值。</p>
+                        <div class="MID-Button">
+                            <a href="">
+                                <span>立即下載</span>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+            </section>
+            <!-- 區塊4 -->
+            <section id="carouselA">
+                <!-- 圖片用RWD會自動更換圖片 -->
+                <picture>
+                    <source srcset="./IMG/Bigimg/IMGBIG12.webp" media="(min-width: 1080px)">
+                    <source srcset="./IMG/Bigimg/IMGBIG22.webp" media="(min-width: 760px)">
+                    <img src="./IMG/Bigimg/IMGBIG002.webp" alt="奇怪的筆電">
+                </picture>
+                <div class="TOP-info">
+                    <h1>Microsoft OneDrive</h1>
+                    <P>將檔案和相片儲存到 OneDrive，即可隨時隨地從人和裝置存取</P>
+                    <div class="Button">
+                        <a href="">
+                            <span>深入了解</span>
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- 區塊5 -->
+            <section id="Business-title">
+                <h3>適用於商務</h3>
+            </section>
+            <section id="carouselC">
+                <a href="">
+                    <div class="MIDIMG">
+                        <img src="./IMG/MIDIMG/IMGzTN1.jpg" alt="">
+                        <h2>適用於商務的 Surface</h2>
+                        <p>無論從事哪種工作，都有一款有助於成功的 Surface。</p>
+                        <div class="MID-Button">
+                            <a href="">
+                                <span>立即選購</span>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="MIDIMG">
+                        <img src="./IMG/MIDIMG/IMGzTN2.jpg" alt="">
+                        <h2>Microsoft Teams</h2>
+                        <p>聊天、開會、通話和共同作業。</p>
+                        <div class="MID-Button">
+                            <a href="">
+                                <span>深入了解</span>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="MIDIMG">
+                        <img src="./IMG/MIDIMG/IMGzTN3.jpg" alt="">
+                        <h2>Microsoft 365 商務版</h2>
+                        <p>透過功能強大的應用程式提高生產力、聯繫和安全，始終領先一步。</p>
+                        <div class="MID-Button">
+                            <a href="">
+                                <span>立即選購</span>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="MIDIMG">
+                        <img src="./IMG/MIDIMG/IMGzTN4.jpg" alt="">
+                        <h2>混合辦公解決方案</h2>
+                        <p>了解我們的方法、Microsoft 這一路以來所得到的教訓，以及如何增強員工能力並滿足新客戶需求。</p>
+                        <div class="MID-Button">
+                            <a href="">
+                                <span>深入了解</span>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+            </section>
+            <section id="carouselD">
+                <div class="GOOGLE">
+                    <span>關注 Microsoft</span>
+                    <a href="https://zh-tw.facebook.com/MicrosoftTaiwan/"><img src="./IMG/GOOGLE/FB.jpg" alt=""></a>
+                    <a href="https://www.youtube.com/user/microsofttaiwan"><img src="./IMG/GOOGLE/YT.jpg" alt=""></a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!--------------- 頁尾 ---------------->
+    <footer>
+        <div class="container">
+            <div class="Bottom-meun">
+                <ul>
+                    <h4>最新動向</h4>
+                    <li><a href="">Microsoft 365</a></li>
+                    <li><a href="">Surface Go</a></li>
+                    <li><a href="">Surface Book2</a></li>
+                    <li><a href="">Surace Pro</a></li>
+                    <li><a href="">Windows 10 應用程式</a></li>
+                </ul>
+                <ul>
+                    <h4>Microsoft Store</h4>
+                    <li><a href="">帳戶設定檔</a></li>
+                    <li><a href="">下載中心</a></li>
+                    <li><a href="">Microsoft Store 支援</a></li>
+                    <li><a href="">退貨/退款</a></li>
+                    <li><a href="">訂單追蹤</a></li>
+                </ul>
+                <ul>
+                    <h4>教育</h4>
+                    <li><a href="">Microsoft 在教育領域的應用</a></li>
+                    <li><a href="">學生適用的 Office</a></li>
+                    <li><a href="">學生適用的 Office 365</a></li>
+                    <li><a href="">Microsoft Azure 在教育領域的應用</a></li>
+                </ul>
+                <ul>
+                    <h4>企業</h4>
+                    <li><a href="">Azure</a></li>
+                    <li><a href="">AppSource</a></li>
+                    <li><a href="">汽車</a></li>
+                    <li><a href="">政府機構</a></li>
+                    <li><a href="">醫療保健</a></li>
+                    <li><a href="">製造</a></li>
+                    <li><a href="">金融服務</a></li>
+                    <li><a href="">零售</a></li>
+                </ul>
+                <ul>
+                    <h4>開發人員</h4>
+                    <li><a href="">Microsoft Visual Studio</a></li>
+                    <li><a href="">Windows 開發人員中心</a></li>
+                    <li><a href="">開發人員中心</a></li>
+                    <li><a href="">Microsoft 開發人員計畫</a></li>
+                    <li><a href="">Channel 9</a></li>
+                    <li><a href="">Microsoft 365 開發人員中心</a></li>
+                    <li><a href="">Microsoft 365 開發人員計畫</a></li>
+                </ul>
+                <ul>
+                    <h4>公司</h4>
+                    <li><a href="">人才招募</a></li>
+                    <li><a href="">公司新聞</a></li>
+                    <li><a href="">Microsoft 隱私權</a></li>
+                    <li><a href="">投資者</a></li>
+                    <li><a href="">安全性</a></li>
+                </ul>
+            </div>
+            <div class="Bottom-info">
+                <div class="Language">
+                    <ul>
+                        <li>
+                            <a href=""><i class="fas fa-globe-europe"></i><span>中文(台灣)</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Bottom-right-menu">
+                    <ul>
+                        <li><a href="">聯絡 Microsoft</a></li>
+                        <li><a href="">隱私權</a></li>
+                        <li><a href="">使用規定</a></li>
+                        <li><a href="">商標</a></li>
+                        <li><a href="">有關我們的廣告訊息</a></li>
+                        <li class="copyright">© Microsoft 2021 </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>
